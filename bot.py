@@ -12,7 +12,7 @@ import requests
 import json
 
 from dingLog import DingLog
-from Crypto.Cipher import AES
+from python3-cryptography.Cipher import AES
 
 
 class Bot:
