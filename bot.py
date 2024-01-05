@@ -57,7 +57,7 @@ class Bot:
 
     def __getUserTask(self) -> [bool, json]:
         taskData = self.session.get(url=self.taskDataUrl).json()["data"]
-        count = taskData["count"]
+        count = taskData.get("count", 0)  # 默认值为0，您可以根据需要设置其他默认值
         completedCount = taskData["completedCount"]
         todayTask = f"[{completedCount}/{count}]"
         complete = count == completedCount
