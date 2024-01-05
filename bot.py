@@ -158,7 +158,7 @@ def handler(event, context):
 class Context:
     def __init__(self):
         # 需要在同一文件夹下建一个json文件,写入"Cookie_MUSIC_U","Cookie___csrf","BOT_URL"(供钉钉机器人使用,选填)
-        with open("setting.json", "r", encoding="utf-8") as file:
+        with open("/root/CloudMusicBot/setting.json", "r", encoding="utf-8") as file:
             self.dic = json.loads(file.read())
 
     def getUserData(self, key):
